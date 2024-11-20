@@ -1,0 +1,31 @@
+@mixin font-size($val){
+    font-size: $val;
+}
+
+@mixin letter-spacing($val){
+    letter-spacing: $val;
+}
+
+@mixin margin4($top, $right, $bottom, $left){
+    margin: $top $right $bottom $left;
+}
+
+@mixin margin3($top, $mid, $bottom){
+    margin: $top $mid $bottom;
+}
+
+@mixin margin2($y, $x){
+    margin: $y $x;
+}
+
+@mixin padding4($top, $right, $bottom, $left){
+    padding: $top $right $bottom $left;
+}
+
+@mixin padding3($top, $mid, $bottom){
+    padding: $top $mid $bottom;
+}
+
+@mixin padding2($y, $x){
+    padding: $y $x;
+}

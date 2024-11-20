@@ -1,0 +1,258 @@
+@import './variables.scss';
+@import './mixins.scss';
+@import './button.scss';
+@import './responsive.scss';
+
+body{
+    font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
+}
+
+header{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.banner{
+    background-image: url(../images/banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 40%;
+    @include padding2(140px, 0);
+    &__content {
+        h2{
+            @include margin3(0, 0, 20px);
+            @include letter-spacing(-3px);
+            @include font-size(3rem);
+        }
+        p{
+            @include font-size(1.3rem);
+        }
+    }
+}
+
+section h2 {
+    color: $dark-gray-color;
+    @include font-size(3rem);
+    font-weight: $font-600;
+}
+
+.product, .how-works, .benefits, .collections, .the-clock, .team{
+    &__heading p{
+        color: $light-gray-color;
+        @include font-size(1.2rem);
+    }
+}
+
+.how-works, .benefits, .features, .collections, .reviews, .questions, .team{
+    background-color: $bg-color1;
+    &__img {
+        height: 110px;
+    }
+    h3{
+        color: $dark-gray-color2;
+    }
+    p{
+        color: $light-gray-color2;
+    }
+}
+
+.collections{
+    &__img{
+        height: auto;
+    }
+
+    &__price{
+        color: $orange-color;
+    }
+
+    &__desc{
+        h4{
+            color: $blue-color;
+            @include font-size(1rem);
+            font-weight: $font-600;
+        }
+
+        p{
+            color: $light-gray-color3;
+            @include font-size(0.9rem);
+        }
+    }
+}
+
+.the-clock{
+    &__desc{
+        p{
+            color: $light-gray-color;
+            @include font-size(1.2rem);
+        }
+    }
+
+    &__features{
+        i{
+            color: $green-color;
+        }
+
+        p{
+            color: $light-gray-color2;
+            @include font-size(1.3rem);
+            @include padding2(8px, 0);
+        }
+    }
+}
+
+.benefits, .features{
+    background-color: $white-color;
+    &__inner{
+        h3{
+            @include font-size(1.4rem);
+        }
+        i{
+            color: $blue-color;
+        }
+        p{
+            @include font-size(0.9rem);
+        }
+    }
+}
+
+.apps{
+    &__content{
+        h3{
+            color: $dark-gray-color;
+            font-weight: $font-600;
+            @include font-size(2.2rem);
+        }
+        p{
+            color: $light-gray-color3;
+            @include font-size(1.2rem);
+            width: 85%;
+            float: right;
+        }
+    }
+}
+
+.reviews, .questions{
+    p{
+        color: $light-gray-color2;
+        @include font-size(1.2rem);
+    }
+
+    &__img{
+        height: auto;
+    }
+
+    &__desc{
+        p{
+            color: $dark-gray-color2;
+        }
+    }
+}
+
+.questions{
+    &__inner{
+        h6{
+            @include font-size(1.2rem);
+            color: $dark-gray-color;
+            font-weight: $font-600;
+        }
+
+        p{
+            @include font-size(1rem);
+            color: $light-gray-color2;
+        }
+    }
+}
+
+.team{
+    &__img{
+        height: auto;
+    }
+}
+
+.mobile-app{
+    position: relative;
+    padding-top: 135px;
+    background-image: url(../images/mobile-app.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $black-color;
+        opacity: 0.6;
+    }
+
+    &__content{
+        p{
+            color: $light-white-color;
+            @include font-size(1.1rem);
+            line-height: 32px;
+        }
+    }
+}
+
+.social{
+    list-style: none;
+    padding-left: 0;
+    li{
+        width: 48px;
+        height: 48px;
+        font-size: 22px;
+        line-height: 52px;
+        border-radius: 100%;
+        padding: 0;
+        background: #99ceff;
+        cursor: pointer;
+        &:hover{
+            background-color: $dark-gray-color2;
+        }
+    }
+}
+
+.bottom-links{
+    list-style: none;
+    padding-left: 0;
+    border-top: 1px solid #e1e1e1;
+    li:not(:first-child){
+        &:before {
+            content: '\2022';
+            float: left;
+            padding: 0 13px;
+            line-height: 24px;
+            display: block;
+            color: $light-blue-color;
+        }
+    }
+
+    li a{
+        color: $light-blue-color;
+    }
+}
+
+.copyright{
+    p{
+        color: $light-gray-color;
+    }
+}
+
+.w35{
+    width: $width-35;
+}
+
+.w-55{
+    width: 55%;
+}
+
+.font-600{
+    font-weight: 600;
+}
+
+.text-dark-gray{
+    color: $dark-gray-color;
+}
